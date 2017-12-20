@@ -1,39 +1,39 @@
-// $(document).ready(function() {
-//
-//   $('#current-city').change(function() {
-//     var city = $('#current-city').val();
-//     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-//       $('#current-temperature').text(data.main.temp + " °C")
-//   })
-//
-//     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-//       $('#current-weather').text(data.weather[0].description) // this selects the element and updates it w/ the open weather temp
-//     })
-//   })
-//
-//   $('#select-zipcode').submit(function(event) {
-//     event.preventDefault();
-//     var zip = $('#current-city-zipcode').val();
-//     $.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zip + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-//       $('#current-temperature').text(data.main.temp + " °C");
-//     })
-//   })
-//
-// }) // end document.ready wrapper
+$(document).ready(function() {
 
-//MY SECTION
-$(document).ready(function(){
-  var apiKey = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed'
-  var apiCall = 'http://api.openweathermap.org/data/2.5/weather?q='
+  $('#current-city').change(function() {
+    var city = $('#current-city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+      $('#current-temperature').text(data.main.temp + " °C")
+  })
 
-  $("#city").change(function(){
-    var city = $("#city").val();
-    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data){
-      console.log(data);
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+      $('#current-weather').text(data.weather[0].description) // this selects the element and updates it w/ the open weather temp
     })
   })
 
-}) // end doc ready
+  $('#select-zipcode').submit(function(event) {
+    event.preventDefault();
+    var zip = $('#current-city-zipcode').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zip + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+      $('#current-temperature').text(data.main.temp + " °C");
+    })
+  })
+
+}) // end document.ready wrapper
+
+// //MY SECTION
+// $(document).ready(function(){
+//   var apiKey = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed'
+//   var apiCall = 'http://api.openweathermap.org/data/2.5/weather?q='
+//
+//   $("#city").change(function(){
+//     var city = $("#city").val();
+//     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data){
+//       console.log(data);
+//     })
+//   })
+//
+// }) // end doc ready
 
 /*
 QUESTIONS FOR TAEKO:
